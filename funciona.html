@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MyLove</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="adorno.css" />
+    <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/198184/isolated/preview/897d27fc262f890552a3f404ff2b4c28-icono-de-trazo-de-carta-de-amor.png" type="image/x-icon">
+  </head>
+  <body>
+
+    <header class="bg_animate">
+      <div class="header_nav">
+          <div class="contenedor">
+              <h1>My love will be you</h1>
+              <nav>
+                  <a href="index.html">Inicio</a>
+                  <a href="funciona.html">Mensaje secreto</a>
+                  <a href="presión.html">Declaración</a>
+                  <a href="esponjas.html">Abrazo virtual</a>
+              </nav>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div id="message">
+          <label for="message"><strong>Cifre o descifre un mensaje de amor <3</strong></label>
+          <textarea id="msg" name="textarea" maxlength="280" placeholder="Ingresa tu texto"></textarea>
+          <span id="counter"><strong>0/280</strong></span>
+          <input id="offset" type="number" min="-100" max="100" placeholder="Contraseña" name="offset" step="1">
+          <div class="btnGroup">
+            <button id="cipher" name="cipher" type="button">Cifrar
+            </button>
+            <button id="decipher" name="decipher" type="button">Descifrar
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="modalContainer containerClose">
+        <div id="messageResult" class="modal modalClose">
+          <p id="close"><i class="fas fa-times"></i></p>
+          <label for="messageResult" id="lblMsgResult">Su mensaje es</label>
+          <textarea id="msgResult" name="textarea" readonly></textarea>
+          <button id="copy" name="copy" type="button">Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+    <script src="cipher.js"></script>
+  </body>
+</html>

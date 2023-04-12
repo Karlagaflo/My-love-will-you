@@ -1,0 +1,323 @@
+:root{
+    --color-main: rgb(236, 183, 238);
+    --color-secondary: rgb(182, 65, 65);
+    --color-placeholder-main: #D3CCE3;
+    --color-placeholder-secondary: #E9E4F0;
+    --color-white: rgb(0, 0, 0);
+    --font-main: 'Comfortaa', cursive;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-main);
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-san-valentin-corazones-color-rosa_1308-37924.jpg?w=2000);
+    background-size: cover;
+    color: var(--color-white);
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.contenedor a{
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.bg_animate{
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to right, #cf7676, #d47878 );
+    position: relative;
+    overflow: hidden;
+}
+
+.header_nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header_nav .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header_nav h1{
+    color: #fff;
+    font-family: 'Gagalin';
+}
+
+.header_nav nav a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+#message{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 2rem;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.btnGroup{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 600px;
+}
+
+
+label{
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-main);
+}
+
+span{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: end;
+    font-weight: 300;
+}
+
+textarea{
+    resize: none;
+    border-radius: 100px;
+    padding: 10px;
+    font-family: var(--font-secondary);
+    background-image: url(https://i.pinimg.com/550x/b5/06/29/b506291575d1bb71c7ff7c219ef32e0d.jpg);
+    font-weight: 300;
+    font-size: 1rem;
+    height: 12rem;
+    text-align: center;
+    border: 5px solid var(--color-secondary);
+    color: var(--color-white);
+    width: 1076px;
+}
+
+textarea:focus-visible{
+    outline: none;
+    box-shadow: 0 0 0.5rem var(--color-secondary);
+}
+
+textarea::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color:var(--color-secondary);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
+
+textarea::placeholder{
+    color: var(--color-placeholder-main);
+    color: -webkit-linear-gradient(to right, var(--color-placeholder-secondary), var(--color-placeholder-main));
+    color: linear-gradient(to right, var(--color-placeholder-secondary), var(--color-placeholder-main));
+}
+
+input[type="number"] {
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-white);
+    background-color: transparent;
+    border: 5px solid var(--color-secondary);
+    border-radius: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 1.3rem;
+    width: 300px;
+}
+
+input[type="number"]::placeholder{
+    color: var(--color-placeholder-main);
+    color: -webkit-linear-gradient(to right, var(--color-placeholder-secondary), var(--color-placeholder-main));
+    color: linear-gradient(to right, var(--color-placeholder-secondary), var(--color-placeholder-main));
+}
+
+input[type="number"]:focus-visible{
+    outline: none;
+    box-shadow: 0 0 0.5rem var(--color-secondary);
+}
+
+button{
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    border-radius: 60px;
+    background-color: var(--color-secondary);
+    color: var(--color-placeholder-secondary);
+    border: none;
+    margin-bottom: 0.5rem;
+    width: 20%;
+}
+
+button:hover{
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 0.5rem var(--color-secondary);
+}
+
+button#copy{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 100%;
+}
+
+textarea#msgResult{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0.5rem;
+    margin-bottom: 0;
+}
+
+textarea#msgResult:focus-visible{
+    outline-color: transparent;
+    padding: 0.5rem;
+}
+
+.modalContainer{
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerClose{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSULhXV5g3pKoMKZfAkSEZhaMmXXB-Sv0XZPiJrQK8CfPv0kbJl);
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 0.5rem;
+    animation: open 0.5s forwards;
+    border-radius: 40px;
+}
+
+.modalClose{
+    animation: close 0.5s forwards;
+}
+
+#close{
+    margin: 5px 5px 0px 0px;
+    align-self: flex-end;
+    width: 25px;
+    height:  25px;
+    font-size: 1.5rem;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+@keyframes open{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    70%{
+        transform: scale(0.95);
+    }
+    95%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes close{
+    100%{
+        transform: translateY(-100vh) scale(0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    30%{
+        transform: scale(0.95);
+    }
+    5%{
+        transform: scale(1.1);
+    }
+    0%{
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 200px){
+    h1{
+        font-size: 2rem;
+    }
+}
+@media (min-width: 400px){
+    button{
+        width: 49%;
+    }
+}
+@media (min-width: 768px){
+    #message{
+        width: 70%;
+    }
+    button{
+        width: 49%;
+        font-size: 1rem;
+    }
+}
